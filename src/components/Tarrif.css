@@ -1,0 +1,230 @@
+.tariffs-container {
+  min-height: calc(100vh - 60px);
+  background: #f9fafb;
+  padding: 2.5rem 1rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* ── Header ── */
+
+.tariffs-header {
+  margin-bottom: 2rem;
+}
+
+.tariffs-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 4px;
+}
+
+.tariffs-subtitle {
+  font-size: 13px;
+  color: #9ca3af;
+  margin: 0;
+}
+
+/* ── Grid of 4 tables ── */
+
+.tariffs-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+/* ── Tariff Card ── */
+
+.tariff-card {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.tariff-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.875rem 1.25rem;
+  background: #1d9e75;
+}
+
+.tariff-ampere {
+  font-size: 16px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 0.5px;
+}
+
+.tariff-ampere-label {
+  font-size: 12px;
+  color: #a7f3d0;
+}
+
+/* ── Table ── */
+
+.tariff-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.tariff-table thead tr {
+  background: #f9fafb;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.tariff-table th {
+  padding: 0.625rem 1rem;
+  text-align: left;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #6b7280;
+  white-space: nowrap;
+}
+
+.tariff-table td {
+  padding: 0.625rem 1rem;
+  color: #374151;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.tariff-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.tariff-table tbody tr:hover {
+  background: #f9fafb;
+}
+
+.td-center {
+  text-align: center;
+  color: #9ca3af;
+  font-size: 12px;
+}
+
+.td-right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+/* ── Payment Rules ── */
+
+.tariffs-rules-section {
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tariffs-rules-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 4px;
+}
+
+.tariffs-rules-subtitle {
+  font-size: 13px;
+  color: #9ca3af;
+  margin: 0 0 1.25rem;
+}
+
+.rules-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+.rule-card {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 0.875rem 1rem;
+  border-radius: 8px;
+  border: 1px solid transparent;
+}
+
+.rule-card--discount {
+  background: #e1f5ee;
+  border-color: #a7f3d0;
+}
+
+.rule-card--neutral {
+  background: #f3f4f6;
+  border-color: #e5e7eb;
+}
+
+.rule-card--fine {
+  background: #fef2f2;
+  border-color: #fecaca;
+}
+
+.rule-card--danger {
+  background: #fffbeb;
+  border-color: #fcd34d;
+}
+
+.rule-days {
+  font-size: 12px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.rule-label {
+  font-size: 15px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.rule-card--discount .rule-label {
+  color: #0f6e56;
+}
+.rule-card--fine .rule-label {
+  color: #b91c1c;
+}
+.rule-card--danger .rule-label {
+  color: #92400e;
+}
+
+.rule-note {
+  font-size: 11px;
+  color: #6b7280;
+}
+
+/* ── Footnote ── */
+
+.tariffs-footnote {
+  font-size: 12px;
+  color: #9ca3af;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* ── Responsive ── */
+
+@media (max-width: 768px) {
+  .tariffs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .rules-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .rules-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tariff-table th,
+  .tariff-table td {
+    padding: 0.5rem 0.75rem;
+  }
+}

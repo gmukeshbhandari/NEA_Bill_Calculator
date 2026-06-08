@@ -1,0 +1,135 @@
+.links-container {
+  min-height: calc(100vh - 60px);
+  background: #f9fafb;
+  padding: 2.5rem 1rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* ── Header ── */
+
+.links-header {
+  margin-bottom: 2rem;
+}
+
+.links-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0 0 4px;
+}
+
+.links-subtitle {
+  font-size: 13px;
+  color: #9ca3af;
+  margin: 0;
+}
+
+/* ── Content ── */
+
+.links-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* ── Group ── */
+
+.link-group-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 0.875rem;
+}
+
+.link-group-icon {
+  font-size: 18px;
+}
+
+.link-group-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #111827;
+  margin: 0;
+}
+
+/* ── Cards ── */
+
+.link-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 0.75rem;
+}
+
+.link-card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 1rem 1.25rem;
+  text-decoration: none;
+  transition:
+    border-color 0.15s,
+    box-shadow 0.15s;
+}
+
+.link-card:hover {
+  border-color: #1d9e75;
+  box-shadow: 0 2px 8px rgba(29, 158, 117, 0.1);
+}
+
+.link-card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.link-card-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #111827;
+  line-height: 1.4;
+}
+
+.link-card-tag {
+  font-size: 11px;
+  font-weight: 500;
+  padding: 2px 8px;
+  border-radius: 20px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.link-card-desc {
+  font-size: 12px;
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.link-card-url {
+  font-size: 11px;
+  color: #9ca3af;
+  margin-top: 2px;
+  word-break: break-all;
+}
+
+/* ── Footnote ── */
+
+.links-footnote {
+  font-size: 12px;
+  color: #9ca3af;
+  margin: 2rem 0 0;
+  line-height: 1.6;
+}
+
+/* ── Responsive ── */
+
+@media (max-width: 480px) {
+  .link-cards {
+    grid-template-columns: 1fr;
+  }
+}

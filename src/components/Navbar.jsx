@@ -1,11 +1,22 @@
 import { useState } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import "./Navbar.css";
 
-const links = ["Home", "NEA Tarrifs", "Official Links", "About"];
+const links = [
+  { label: "Home", path: "/" },
+  { label: "NEA Consumer Tariff Rates", path: "/nea-consumer-rariff-rates" },
+  { label: "Official Links", path: "/officiallinks" },
+];
 
 const Navbar = () => {
-  const [active, setActive] = useState("Home");
   const [menuOpen, setMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleNav = (path) => {
+    navigate(path);
+    setMenuOpen(false);
+  };
 
   return (
     <nav className="nav">
@@ -13,11 +24,11 @@ const Navbar = () => {
       <div className="links">
         {links.map((link) => (
           <button
-            key={link}
-            onClick={() => setActive(link)}
-            className={`link ${active === link ? "linkActive" : ""}`}
+            key={link.path}
+            onClick={() => handleNav(link.path)}
+            className={`link ${location.pathname === link.path ? "linkActive" : ""}`}
           >
-            {link}
+            {link.label}
           </button>
         ))}
       </div>
@@ -33,14 +44,11 @@ const Navbar = () => {
         <div className="mobileMenu">
           {links.map((link) => (
             <button
-              key={link}
-              onClick={() => {
-                setActive(link);
-                setMenuOpen(false);
-              }}
-              className={`mobileLink ${active === link ? "mobileLinkActive" : ""}`}
+              key={link.path}
+              onClick={() => handleNav(link.path)}
+              className={`mobileLink ${location.pathname === link.path ? "mobileLinkActive" : ""}`}
             >
-              {link}
+              {link.label}
             </button>
           ))}
         </div>
