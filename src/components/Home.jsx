@@ -2,6 +2,7 @@ import { useState } from "react";
 import { calculateBill, validateForm } from "../utils/neaBilling";
 import NepaliDate from "nepali-date-converter";
 import "./Home.css";
+import BillGuide from "./BillGuide";
 
 import {
   getNepaliYears,
@@ -145,7 +146,7 @@ const Home = () => {
             Volt
           </p>
         </div>
-
+        <BillGuide />
         {/* ── Form ── */}
         <div className="home-form">
           {/* Row 1 — Meter Readings */}
